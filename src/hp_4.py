@@ -10,9 +10,9 @@ def reformat_dates(old_dates):
     element to a format dd mmm yyyy--01 Jan 2001."""
     newdates=[]
     
-    for d in dates:
+    for d in old_dates:
         
-        r = datetime.datetime.strptime(d, "%Y-%m-%d").strftime('%d %b %Y')
+        r = datetime.strptime(d, "%Y-%m-%d").strftime('%d %b %Y')
         
         newdates.append(r)
         
@@ -29,7 +29,7 @@ def date_range(start, n):
     
     list_n = []
     
-    start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
+    start_date = datetime.strptime(start, '%Y-%m-%d')
     
     for i in range(n):
         
