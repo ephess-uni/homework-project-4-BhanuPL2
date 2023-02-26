@@ -51,7 +51,8 @@ def add_date_range(values, start_date):
 def fees_report(infile, outfile):
     """Calculates late fees per patron id and writes a summary report to
     outfile."""
-    infileheaders = ('book_uid', 'isbn_13', 'patron_id', 'date_checkout', 'date_due', 'date_returned'.split(','))
+    infileheaders = ("book_uid,isbn_13,patron_id,date_checkout,date_due,date_returned".
+              split(','))
     
     fees = defaultdict(float)
     
