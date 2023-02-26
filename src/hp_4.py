@@ -42,13 +42,10 @@ def add_date_range(values, start_date):
     """Adds a daily date range to the list `values` beginning with
     `start_date`.  The date, value pairs are returned as tuples
     in the returned list."""
-    num_days = len(values)
-    
-    date_range_list = date_range(start_date, num_days)
-    
-    r = list(zip(date_range_list, values))
-    
-    return r
+    len_vls = len(values)
+    td = date_range(start_date, len_vls)
+    sert = list(zip(td, values))
+    return sert
 
 
 def fees_report(infile, outfile):
