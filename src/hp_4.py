@@ -77,9 +77,9 @@ def fees_report(infile, outfile):
     finalIst = [
         {'patron_id': pn, 'late_fees': f'{fs:0.2f}'} for pn, fs in fees.items()
     ]
-    with open(outfile, 'w', newline='') as f:
+    with open(outfile, 'w') as f:
         
-        writer = DictWriter(f,outfile_header)
+        writer = DictWriter(f,['patron_id', 'late_fees'])
         writer.writeheader()
         writer.writerows(finalIst)
 
