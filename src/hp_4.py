@@ -68,7 +68,7 @@ def fees_report(infile, outfile):
         date_due = datetime.strptime(each_line['date_due'], "%m/%d/%Y")
         
         date_returned = datetime.strptime(each_line['date_returned'], "%m/%d/%Y")
-        daysLate = date_returned > date_due
+        daysLate = (date_returned - date_due).days
         
         fees[patronID]+= 0.25 * daysLate if daysLate > 0 else 0.0
         
