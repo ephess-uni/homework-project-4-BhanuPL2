@@ -33,7 +33,7 @@ def date_range(start, n):
     
     for i in range(n):
         
-        list_n.append(start_date + datetime.timedelta(days=i))
+        list_n.append(start_date + timedelta(days=i))
         
     return list_n
 
